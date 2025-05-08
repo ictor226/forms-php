@@ -5,7 +5,6 @@ echo  '<pre>';
 var_dump(
     $_POST
 );
-
 $nomeFormulario = $_POST['nome'];
 
 $dsn = 'mysql:dbname=bd_chamadinhaa;host=127.0.0.1';
@@ -20,9 +19,6 @@ $box = $banco->prepare($insert);
 
 $box->execute([
     ':nome'=> $nomeFormulario  
-
 ]);
-
-
 $id_aluno =  $banco-> lastInsertId();
 
